@@ -1,5 +1,7 @@
+import Component from "./Component";
+
 function App() {
-  return <>hello world</>;
+  return <Component />;
 }
 
 export default App;
