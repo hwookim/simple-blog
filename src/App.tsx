@@ -8,6 +8,10 @@ function App() {
     setPosts([...posts, post]);
   };
 
+  const handleDelete = (idx: number) => {
+    setPosts(posts.filter((_, index) => index !== idx));
+  };
+
   return (
     <div
       style={{
@@ -18,7 +22,10 @@ function App() {
     >
       <PostInput onSubmit={handleSubmit} />
       {posts.map((post, idx) => (
-        <div key={idx}>{post}</div>
+        <div key={idx}>
+          {post}
+          <button onClick={() => handleDelete(idx)}>x</button>
+        </div>
       ))}
     </div>
   );
