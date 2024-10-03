@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+### 1주차: 프로젝트 기본 설정 및 간단한 목록 출력
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [ ] vite를 통해 프로젝트 세팅 (CRA 하셔도 됩니당)
+- [ ] ESLint, Prettier 설정
+- [ ] 게시글 입력 기능 구현 (input에서 입력한 값 저장)
+- [ ] 입력한 게시글을 별도의 화면에 출력
+- [ ] README.md에 구현 목록 작성해두기
 
-Currently, two official plugins are available:
+**도전 과제**: **CSS-in-JS 도입해보기 (styled-components, emotion)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2주차: 게시글 추가 및 삭제 기능 구현
 
-## Expanding the ESLint configuration
+- [ ] 게시글을 추가하면 목록에 새로운 게시글 추가
+- [ ] 게시글 삭제 버튼 구현 및 삭제 기능
+- [ ] 간단한 상태 관리 (useState로 리스트 관리)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**도전 과제**: **Storybook 도입해보기**
 
-- Configure the top-level `parserOptions` property like this:
+### 3주차: Express 연동하여 API 처리
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [ ] Express 서버에서 게시글 목록 데이터를 관리
+- [ ] 프론트엔드에서 POST 요청으로 게시글 추가, DELETE 요청으로 게시글 삭제
+- [ ] 서버와 클라이언트 간 데이터 주고받기
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**도전 과제**: **React Query 도입해보기**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+**도전 과제**: **routing-controllers 도입해보기**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 4주차: 게시글 수정 기능 및 완성
+
+- [ ] 게시글 수정 기능 구현 (수정 버튼 클릭 시 input에 기존 내용 불러오기)
+- [ ] 수정된 내용을 다시 서버에 보내 업데이트
+- [ ] 간단한 에러 처리 (API 호출 실패 시 안내 메시지 출력)
+
+**도전 과제**: **Express Validator로 입력 데이터 유효성 검사**
