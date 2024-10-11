@@ -19,6 +19,10 @@
     "typescript-eslint": "^8.0.1"
   },
   "workspaces": [
-    "packages/client"
-  ]
+    "packages/client",
+    "packages/server"
+  ],
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }
