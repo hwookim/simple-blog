@@ -1,7 +1,18 @@
 const db = require("../repositories/db");
 
+class NonTitleError extends Error {
+  status = 400;
+  constructor(message) {
+    super(message);
+    this.name = "NonTitleError";
+  }
+}
+
 class PostService {
   async createPost(post) {
+    if (!post.title.trim()) {
+      throw new NonTitleError("Title is required");
+    }
     const newPost = {
       id: db.posts.length + 1,
       ...post,
